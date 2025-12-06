@@ -118,7 +118,7 @@ confusionMatrix(tree_pred, as.factor(test$Attrition))
 
 Includes pruning & visualization with rpart.plot.
 
-Model 3: XGBoost
+#Model 3: XGBoost
 xgb_model <- xgboost(
   data = dtrain,
   objective = "binary:logistic",
@@ -136,7 +136,7 @@ AUC score
 
 Feature importance chart
 
-4. Optimization: Reducing Predicted Attrition
+#4. Optimization: Reducing Predicted Attrition
 
 This section uses logistic regression coefficients to optimize HR policies such as:
 
@@ -166,15 +166,13 @@ Optimal policy decisions
 
 Minimum predicted attrition score
 
-Example output:
-
-Optimal Salary Adjustment: 12.4%
+optimal Salary Adjustment: 8.4%
 Overtime Reduction: 38.7%
 Training Investment: $210
 Flexible Work Program: Yes
 Minimum Predicted Attrition Score: 0.124
 
-5. Sensitivity Analysis
+#5. Sensitivity Analysis
 
 A heatmap demonstrates how salary adjustments & overtime reductions jointly affect predicted attrition.
 
@@ -182,7 +180,7 @@ ggplot(grid, aes(x = SalaryAdj*100, y = OvertimeRed*100, fill = AttritionScore))
   geom_tile() +
   scale_fill_gradient(low = "green", high = "red")
 
-Results Summary
+#Results Summary
 XGBoost generally performs best (highest AUC)
 Major attrition drivers include:
 
@@ -206,7 +204,7 @@ Targeted training investment
 
 Optional salary adjustments
 
-🏁 Conclusion
+#Conclusion
 
 This project demonstrates a full machine learning workflow applied to HR analytics.
 It not only predicts attrition but also recommends optimized HR strategies supported by quantitative analysis.
