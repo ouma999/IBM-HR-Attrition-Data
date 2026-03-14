@@ -1,4 +1,4 @@
-# IBM-HR-Attrition-Data
+# Human Resource ATtrition Rate Analysis using IBM Data
 Overview
 
 #This project analyzes employee attrition using machine learning and statistical modeling. It delivers:
